@@ -1,2 +1,2 @@
-DROP DATABASE IF EXISTS Game-Coven_db;
-CREATE DATABASE Game-Coven_db;
+DROP DATABASE IF EXISTS Game_Coven_db;
+CREATE DATABASE Game_Coven_db;
