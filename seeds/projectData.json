@@ -1,8 +1,27 @@
 [
+    { 
+        "name":"Baldur's Gate 3",
+        "description": "Baldur’s Gate 3 is a story-rich, party-based RPG set in the universe of Dungeons & Dragons, where your choices shape a tale of fellowship and betrayal, survival and sacrifice, and the lure of absolute power.",
+        "imageURL":"https://cdn.cloudflare.steamstatic.com/steam/apps/1086940/header.jpg?t=1703250718"
+    },
+    { 
+        "name":"Starfield",
+        "description": "Starfield is the first new universe in 25 years from Bethesda Game Studios, the award-winning creators of The Elder Scrolls V: Skyrim and Fallout 4.",
+        "imageURL":"https://cdn.cloudflare.steamstatic.com/steam/apps/1716740/header.jpg?t=1704299959"
+    },
     {
- 
-"name":"Baldur's Gate 3",
-"description": "Baldur’s Gate 3 is a story-rich, party-based RPG set in the universe of Dungeons & Dragons, where your choices shape a tale of fellowship and betrayal, survival and sacrifice, and the lure of absolute power.",
-"imageURL":""
+        "name":"Street Fighter 6",
+        "description":"Here comes Capcom’s newest challenger! Street Fighter™ 6 launches worldwide on June 2nd, 2023 and represents the next evolution of the Street Fighter™ series! Street Fighter 6 spans three distinct game modes, including World Tour, Fighting Ground and Battle Hub.",
+        "imageURL":"https://cdn.cloudflare.steamstatic.com/steam/apps/1364780/header_alt_assets_8.jpg?t=1702388165"
+    },
+    {
+        "name":"EA SPORTS FC™ 24",
+        "description":"EA SPORTS FC™ 24 welcomes you to The World’s Game: the most true-to-football experience ever with HyperMotionV, PlayStyles optimised by Opta, and an enhanced Frostbite™ Engine.",
+        "imageURL":"https://cdn.cloudflare.steamstatic.com/steam/apps/2195250/header.jpg?t=1702408161"
+    },
+    {
+        "name":"Turbo Overkill",
+        "description":"Turbo Overkill is complete and with many new updates (just in: spectacular ending credits). Clean up Paradise with your chainsaw leg, 15+ weapons & hovercar, and battle Syn (a super AI), bounty hunters, and cyberpunks aplenty. Apogee's most outrageous FPS since Duke Nukem 3D. Good hunting, Sir!",
+        "imageURL":"https://cdn.cloudflare.steamstatic.com/steam/apps/1328350/header.jpg?t=1701886460"
     }
 ]
