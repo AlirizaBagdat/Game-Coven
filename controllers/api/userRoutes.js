@@ -1,58 +1,42 @@
-const router =require('express').Router();
-const bycrypt = require('bycrypt');
-const User = require('../../models/User');
+const router = require('express').Router();
+const passport = require('passport');
+const { User } = require('../../models');
 
-//Route for registration
-router.post('/register', async (req,res)=>{
-    try{
-     // Get user input from request body
-     const { username, password } = req.body;
+// POST route to register a new user
+router.post('/', async (req, res) => {
+  try {
+    // Create a new user using the User model and the request body
+    const userData = await User.create(req.body);
 
-     // Hash the password
-     const hashedPassword = await bcrypt.hash(password, 10);
- 
-     // Create a new user in the database
-     const user = await User.create({
-       username,
-       password: hashedPassword
-     });
- 
-     // Return the created user as response
-     res.status(201).json(user);
-   } catch (error) {
-     console.error(error);
-     res.status(500).json({ error: 'Internal server error' });
-   }
- });
- 
- // Route for user login
- router.post('/login', async (req, res) => {
-   try {
-     // Get user input from request body
-     const { username, password } = req.body;
- 
-     // Find the user in the database
-     const user = await User.findOne({ where: { username } });
- 
-     // If user does not exist, return error message
-     if (!user) {
-       return res.status(404).json({ error: 'User not found' });
-     }
- 
-     // Compare the provided password with the hashed password in the database
-     const passwordMatch = await bcrypt.compare(password, user.password);
- 
-     // If passwords do not match, return error message
-     if (!passwordMatch) {
-       return res.status(401).json({ error: 'Invalid password' });
-     }
- 
-     // User authentication successful, return success message
-     res.status(200).json({ message: 'Login successful' });
-   } catch (error) {
-     console.error(error);
-     res.status(500).json({ error: 'Internal server error' });
-   }
- });
- 
- module.exports = router;
+    // Log in the new user using Passport.js
+    req.login(userData, (err) => {
+      if (err) {
+        // If there is an error, send a 500 status code and the error message
+        res.status(500).json(err);
+      } else {
+        // If successful, send a 200 status code and the user data
+        res.status(200).json(userData);
+      }
+    });
+  } catch (err) {
+    // If there is an error, send a 400 status code and the error message
+    res.status(400).json(err);
+  }
+});
+
+// POST route to handle user login using Passport.js
+router.post('/login', passport.authenticate('local'), (req, res) => {
+  // If authentication is successful, send a JSON response with the user data and a success message
+  res.json({ user: req.user, message: 'You are now logged in!' });
+});
+
+// POST route to handle user logout
+router.post('/logout', (req, res) => {
+  // Log out the user
+  req.logout();
+
+  // Destroy the session and send a 204 status code
+  req.session.destroy(() => {
+    res.status(204).end();
+  });
+});
