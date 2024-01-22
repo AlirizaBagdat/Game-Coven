@@ -39,9 +39,9 @@ fetchComments().then((backendComments) => {                                     
 });
 
 
-function renderComments() (                                                                        // Function to render comments using Handlebars
+function renderComments() (                                                                        // <= Function to render comments using Handlebars.
     const commentsTemplate = document.getElementById('comments-template').innerHTML;
     const compiledTemplate = Handlebars.compile(commentsTemplate);
 
-    // Assuming you have a div with the id 'comments-container' to display comments
-    document.getElementById('comments-container').innerHTML = compiledTemplate({ comments: commentsArray });
+    
+    document.getElementById('comments-container').innerHTML = compiledTemplate({ comments: commentsArray }); // <= ID-for comments. 
