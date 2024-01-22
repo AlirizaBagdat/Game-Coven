@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Game_Conven</title>
+        <link rel="stylesheet" href="/css/jass.css">
+        <link rel="stylesheet" href="/css/style.css">
+    </head>
+    <body>
+        <header class="display-flex justify-space-between align-center p-2">
+            <h1>
+                <a href="/">Game Coven</a>
+            </h1>
+            <nav>
+                <!-- Conditionally render login or logout links -->
+                {{#if logged_in}}
+                <a href="/profile">profile</a> |
+                <button class="no-button" id="logout">logout</button>
+                {{else}}
+                <a href="/login">login</a>
+                <a href="/signup">sign up</a>
+                {{/if}}
+            </nav>
+            <main class="container container-fluid mt-5">
+                <!-- Render the sub layout -->
+                {{{ body }}}
+            </main>
+        </header>
+    </body>
+</html>
