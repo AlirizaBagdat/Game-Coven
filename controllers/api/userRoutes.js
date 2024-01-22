@@ -1,9 +1,9 @@
-const router = require('express').Router();
-const passport = require('passport');
-const { User } = require('../../models');
+const router = require("express").Router();
+const passport = require("passport");
+const { User } = require("../../models");
 
 // POST route to register a new user
-router.post('/', async (req, res) => {
+router.post("/", async (req, res) => {
   try {
     // Create a new user using the User model and the request body
     const userData = await User.create(req.body);
@@ -25,13 +25,13 @@ router.post('/', async (req, res) => {
 });
 
 // POST route to handle user login using Passport.js
-router.post('/login', passport.authenticate('local'), (req, res) => {
+router.post("/login", passport.authenticate("local"), (req, res) => {
   // If authentication is successful, send a JSON response with the user data and a success message
-  res.json({ user: req.user, message: 'You are now logged in!' });
+  res.json({ user: req.user, message: "You are now logged in!" });
 });
 
 // POST route to handle user logout
-router.post('/logout', (req, res) => {
+router.post("/logout", (req, res) => {
   // Log out the user
   req.logout();
 
@@ -40,3 +40,27 @@ router.post('/logout', (req, res) => {
     res.status(204).end();
   });
 });
+
+// DELETE route to delete a user
+router.delete("/:userId", async (req, res) => {
+  try {
+    const userId = req.params.userId;
+
+    // Find the user with the given ID
+    const user = await User.findOne({ _id: userId });
+
+    if (!user) {
+      return res.status(404).json({ message: "User not found" });
+    }
+
+    // Delete the user
+    await user.remove();
+
+    res.json({ message: "User deleted successfully" });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: "Server error" });
+  }
+});
+
+module.exports = router;
