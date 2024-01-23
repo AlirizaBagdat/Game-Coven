@@ -1,3 +1,125 @@
-a {
-    color: purple;
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1e1e1e; /* Dark background for gaming vibe */
+    color: #ffffff; /* Light text for contrast */
+}
+
+/* Header Styling */
+header {
+    background-color: #2c3e50; /* Dark blue header */
+    padding: 10px 20px;
+    text-align: center;
+}
+
+header h1 a {
+    color: #e74c3c; /* Bright color for the site title */
+    text-decoration: none;
+    font-size: 2rem; /* Larger font size for title */
+}
+
+/* Navigation Styling */
+nav a, .no-button {
+    color: #ffffff;
+    text-decoration: none;
+    margin-right: 15px;
+    font-weight: bold;
+}
+
+.no-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #f39c12; /* Orange color for logout button */
+}
+
+nav a:hover, .no-button:hover {
+    color: #3498db; /* Color change on hover */
+}
+
+/* Main Content Area */
+.main {
+    margin-top: 20px;
+    padding: 20px;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+.container-fluid {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* Utility classes */
+.display-flex {
+    display: flex;
+}
+
+.image-title {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+}
+
+.justify-space-between {
+    justify-content: space-between;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.p-2 {
+    padding: 2rem;
+}
+
+.mt-5 {
+    margin-top: 5rem;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .display-flex {
+        flex-direction: column;
+    }
+
+    .mt-5 {
+        margin-top: 2rem;
+    }
+}
+
+.logo img {
+    height: 100px; /* Adjust the size as needed */
+    width: auto; /* This maintains the aspect ratio */
+    margin-right: 20px;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .logo img {
+        height: 60px; /* Smaller size for mobile */
+    }
+}
+
+/* If you want the logo and title on the same line */
+.logo {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
