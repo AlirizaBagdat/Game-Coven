@@ -1,0 +1,28 @@
+<div class="row">
+  <div class="col-auto">
+    <h2>{{name}}!</h2>
+    <img src={{imageURL}} alt="picture"> 
+  </div>
+</div>
+
+<div class="row mt-4">
+  <div class="col-md-6">
+    <h3> {{description}}</h3>
+  </div>
+
+  {{#if reviews.length}}
+  <div class="col-md-6 project-list">
+    <h3>Current Reviews</h3>
+
+    {{#each reviews as |review|}}
+    <div class="row mb-2">
+        <h4>{{review.score}}</h4>
+        <h5>{{review.description}}</h5>
+    </div>
+     
+    {{/each}}
+  </div>
+  {{/if}}
+</div>
+
+<script src="./js/profile.js"></script>
