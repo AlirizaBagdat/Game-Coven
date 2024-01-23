@@ -47,10 +47,22 @@ router.get('/game/:id', async (req, res) => {
   try {
     const gameData = await Game.findByPk(req.params.id);
 
-    const game = gameData.get({ plain: true });
+    const games = gameData.get({ plain: true });
 
-    res.render('game', {
-      ...game,
+    const reviewData = await Review.findAll({
+      where: {
+        game_id: req.params.id
+       }
+      });
+    const reviews = reviewData.map((review) => review.get({ plain: true }));
+      console.log({
+        ...games,
+        ...reviews,
+        logged_in: req.session.logged_in
+      });
+    res.render('gamepage', {
+      ...games,
+      reviews,
       logged_in: req.session.logged_in
     });
   } catch (err) {
