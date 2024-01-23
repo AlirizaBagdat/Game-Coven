@@ -1,25 +1,18 @@
 const router = require("express").Router();
-const { Review, User } = require("../models");
+const { Review, User, Game } = require("../models");
 const withAuth = require("../utils/auth");
 
 // Get all reviews and join with user data
 router.get("/", async (req, res) => {
   try {
-    const reviewData = await Review.findAll({
-      include: [
-        {
-          model: User,
-          attributes: ["name"],
-        },
-      ],
-    });
+    const gameData = await Game.findAll();
 
     // Serialize data so the template can read it
-    const reviews = reviewData.map((review) => review.get({ plain: true }));
+    const games = gameData.map((game) => game.get({ plain: true }));
 
     // Pass serialized data and session flag into template
     res.render("homepage", {
-      reviews,
+      games,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
@@ -44,6 +37,21 @@ router.get("/review/:id", async (req, res) => {
     res.render("review", {
       ...review,
       logged_in: req.session.logged_in,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.get('/game/:id', async (req, res) => {
+  try {
+    const gameData = await Game.findByPk(req.params.id);
+
+    const game = gameData.get({ plain: true });
+
+    res.render('game', {
+      ...game,
+      logged_in: req.session.logged_in
     });
   } catch (err) {
     res.status(500).json(err);

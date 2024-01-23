@@ -1,7 +1,7 @@
 // Import the necessary modules
 const router = require("express").Router();
 const userRoutes = require("./userRoutes");
-const reviewRoutes = require("./reviewRoutes");
+const reviewRoutes = require("./reviewRoute");
 
 // Use the userRoutes for requests with "/users" route
 router.use("/users", userRoutes);
