@@ -20,4 +20,4 @@ const login = async (event) => {
     }
 }
 
-document.querySelector('#loginBtn').addEventListener('submit', login);                    
+document.querySelector('.login-form').addEventListener('submit', login);                    
