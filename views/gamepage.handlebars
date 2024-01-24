@@ -5,14 +5,24 @@
   </div>
 </div>
 
+
 <div class="row mt-4">
   <div class="col-md-6">
     <h3> {{description}}</h3>
   </div>
 
+ 
+{{#if logged_in}}
+  <div class="create-review-section text-center mb-4">
+      <a href="/review" class="btn btn-primary">Create New Video Game Review</a>
+  </div>
+{{/if}} 
+
   {{#if reviews.length}}
   <div class="col-md-6 project-list">
     <h3>Current Reviews</h3>
+
+    
 
     {{#each reviews as |review|}}
     <div class="row mb-2">

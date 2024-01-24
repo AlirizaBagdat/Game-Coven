@@ -67,16 +67,16 @@ Contributions to improve Game Coven are welcome. Please ensure to update tests a
 ## Credits
 
 **Mutasim Chaudhary**
-- Github: [@rlobz](https://github.com/Mutasim-c)
+- Github: [@Mutasim-c](https://github.com/Mutasim-c)
 
 **Ali Kocaman**
-- Github: [@rlobz](https://github.com/KDragonuv)
+- Github: [@KDragonuv](https://github.com/KDragonuv)
 
 **Aliriza Bagdat**
-- Github: [@rlobz](https://github.com/AlirizaBagdat)
+- Github: [@AlirizaBagdat](https://github.com/AlirizaBagdat)
 
 **Obiora Ezeasor Nwosu**
-- Github: [@rlobz](https://github.com/Obi1knube)
+- Github: [@Obi1knube](https://github.com/Obi1knube)
 
 **Rafal Lobzowski**
 - Github: [@rlobz](https://github.com/rlobz)
