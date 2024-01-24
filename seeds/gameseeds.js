@@ -1,10 +1,11 @@
 // Import Sequelize instance and models
 const sequelize = require('../config/connection');
-const { Game, Review } = require('../models');
+const { Game, Review, User } = require('../models');
 
 // Import data from JSON files
 const gameData = require('./gameData.json');
 const reviewData = require('./reviews.json');
+const userData = require('./userData.json');
 
 // Define a function to seed the database
 const seedDatabase = async () => {
@@ -14,6 +15,7 @@ const seedDatabase = async () => {
   // Bulk create users using the data from userData.json
   const games = await Game.bulkCreate(gameData);
   const review = await Review.bulkCreate(reviewData);
+  const users = await User.bulkCreate(userData);
 
   // Exit the process after seeding the database
   process.exit(0);
