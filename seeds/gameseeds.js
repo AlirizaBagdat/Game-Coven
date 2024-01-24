@@ -14,8 +14,8 @@ const seedDatabase = async () => {
 
   // Bulk create users using the data from userData.json
   const games = await Game.bulkCreate(gameData);
-  const review = await Review.bulkCreate(reviewData);
   const users = await User.bulkCreate(userData);
+  const review = await Review.bulkCreate(reviewData);
 
   // Exit the process after seeding the database
   process.exit(0);

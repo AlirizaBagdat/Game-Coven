@@ -3,18 +3,18 @@
         
       "name": "Sally",
       "email": "sally@hotmail.com",
-      "password": "password12345"
+      "password": "$2b$10$krbs7RZFR3F1MtrNELhxxOmWekgKSCqavgwRSpeOqdjGlEEyWtTTe"
     },
     {
        
       "name": "Tyler",
       "email": "Tyler@gmail.com",
-      "password": "password12345"
+      "password": "$2b$10$krbs7RZFR3F1MtrNELhxxOmWekgKSCqavgwRSpeOqdjGlEEyWtTTe"
     },
     {
         
       "name": "Ami",
       "email": "ami@aol.com",
-      "password": "password12345"
+      "password": "$2b$10$krbs7RZFR3F1MtrNELhxxOmWekgKSCqavgwRSpeOqdjGlEEyWtTTe"
     }
 ]

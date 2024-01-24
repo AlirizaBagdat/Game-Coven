@@ -1,10 +1,20 @@
 <div>
     <!-- Navigation bar here -->
-    <h1>User Profile</h1>
+    <h1>Hello, {{name}}</h1>
 
-     <ul id="comments-list">
-     <!-- User comments will be inserted here -->
-     </ul>
+     {{#if reviews.length}}
+    <div class="col-md-6 project-list">
+    <h3>Your Reviews</h3>
+
+    {{#each reviews as |review|}}
+    <div class="row mb-2">
+        <h4>{{review.score}}</h4>
+        <h5>{{review.description}}</h5>
+    </div>
+     
+    {{/each}}
+  </div>
+  {{/if}}
 
 </div>
 

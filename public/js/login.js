@@ -13,7 +13,7 @@ const login = async (event) => {
 
         if (response.ok) {                                                                // <= Checking if the response status is ok.
             console.log('Logged in successfully!');                                       // <= If login is successful, then logs a message to user and redirect to the home page.
-            document.location.replace('/');        // <= Need to enter route here!                                        
+            document.location.replace('/profile');        // <= Need to enter route here!                                        
         } else {
             alert(response.statusText);
         }
