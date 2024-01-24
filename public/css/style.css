@@ -30,6 +30,13 @@ nav a, .no-button {
     text-decoration: none;
     margin-right: 15px;
     font-weight: bold;
+    /* padding: 0%; */
+
+    
+    padding: 14px 20px;
+    text-align: center;  
+    border-radius: 10px;
+    font-weight: bold;
 }
 
 .no-button {
@@ -41,6 +48,8 @@ nav a, .no-button {
 
 nav a:hover, .no-button:hover {
     color: #3498db; /* Color change on hover */
+    background-color: white;
+    text-decoration: none;
 }
 
 /* Main Content Area */
@@ -71,6 +80,7 @@ nav a:hover, .no-button:hover {
 
 .image-title {
     display: flex;
+    flex: 0 0 50%;
     justify-content: start;
     align-items: center;
     width: 100%;
@@ -107,6 +117,11 @@ nav a:hover, .no-button:hover {
     height: 100px; /* Adjust the size as needed */
     width: auto; /* This maintains the aspect ratio */
     margin-right: 20px;
+}
+
+.logo img:hover{
+    transform: scale(1.2);
+    box-shadow: 0 0 10px #13293d;
 }
 
 /* Responsive adjustments */
