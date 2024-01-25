@@ -1,3 +1,4 @@
+
 const login = async (event) => {
     event.preventDefault();                                                               // <= Preventing the default form submission behavior.
 
@@ -11,7 +12,7 @@ const login = async (event) => {
             headers: { 'Content-Type': 'application/json' },
         });
 
-        if (response.ok) {                                                                // <= Checking if the response status is ok.
+        if (response.ok) {                                                            // <= Checking if the response status is ok.
             console.log('Logged in successfully!');                                       // <= If login is successful, then logs a message to user and redirect to the home page.
             document.location.replace('/profile');        // <= Need to enter route here!                                        
         } else {
