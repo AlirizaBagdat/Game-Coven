@@ -117,6 +117,7 @@ nav a:hover, .no-button:hover {
     height: 100px; /* Adjust the size as needed */
     width: auto; /* This maintains the aspect ratio */
     margin-right: 20px;
+    border-radius: 5px;
 }
 
 .logo img:hover{
@@ -246,4 +247,21 @@ section p{
 }
 #addReview{
     margin-top: 20px;
+}
+footer {
+    display: flex;
+    justify-content: center; 
+    /* align-items: center; */
+    padding: 30px;
+    clear: both;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+       
+}
+#gitlogo{
+    margin: 0 20px;
+    font-size: 20px;
+}
+footer a{
+    color: white;
 }
