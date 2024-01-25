@@ -8,14 +8,15 @@
 
  
 {{#if logged_in}}
-  <div class="create-review-section text-center mb-4">
-      <a href="/review/{{id}}" class="btn btn-primary">Create New Video Game Review</a>
+  <div class=" text-center mb-4">
+      <a id="addReview" href="/review/{{id}}" class="btn btn-primary">Add Review</a>
   </div>
 {{/if}} 
 
   {{#if reviews.length}}
   <div class="col-md-6 project-list">
     <h3 id="cReview">Current Reviews</h3>
+  
 
     {{#each reviews as |review|}}
 <section id="boxReview">    
