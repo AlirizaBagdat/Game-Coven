@@ -1,8 +1,10 @@
 {{#each games as |game| }}
 <section>
-  <h2><a href="/game/{{game.id}}">{{game.name}}</a></h2>
+  <h2 id="nameGame"><a href="/game/{{game.id}}">{{game.name}}</a></h2>
+  <div class="flex-container-game">
   <img src={{game.imageURL}} alt="picture"> 
   <p>{{game.description}}</p>
+  </div>
 </section>
 {{/each}}
 
