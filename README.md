@@ -2,7 +2,7 @@
 
 Game Coven is an engaging and dynamic gaming blog and community platform. It offers users the ability to sign up, log in, create profiles, post gaming-related content, and interact through comments. Designed with a sleek, gaming-centric aesthetic, Game Coven aims to be the go-to destination for gamers seeking to share experiences, reviews, and discussions about the latest in the gaming world.
 
-![website screenshot](./public/images/GameCoven.png)
+![website screenshot](./public/images/Screenshot.png)
 
 ## Table of Contents
 
@@ -10,7 +10,7 @@ Game Coven is an engaging and dynamic gaming blog and community platform. It off
 - [Usage](#usage)
 - [Features](#features)
 - [Technologies Used](#technologies-used)
-- [Demo Video](#demo-video)
+- [Deployment](#deployment)
 - [Contributing](#contributing)
 - [Credits](#credits)
 
@@ -58,7 +58,7 @@ Once the server is running, navigate to `http://localhost:3001` in your web brow
 
 ## Deployment
 
-This application is deployed on Heroku. Check out the live application [here](https://).
+This application is deployed on Heroku. Check out the live application [here](https://game-coven-102039f7545e.herokuapp.com/).
 
 ## Contributing
 
