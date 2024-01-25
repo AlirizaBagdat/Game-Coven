@@ -232,18 +232,25 @@ section p{
     margin: 20px;
     
 }
+
 #boxReview{
     display: flex;
     flex-direction: row;
     height: 250px;
     padding: 20px;
-
-    /* align-items: center; */
-    /* align-items: stretch;  */
+    align-items: stretch;
     margin-bottom: 20px;
-    /* width: 100%; */
+    width: 200%;
+    position: relative;
 
 }
+
 #addReview{
     margin-top: 20px;
+}
+
+.review-date {
+    position: absolute;
+    right: 0;
+
 }

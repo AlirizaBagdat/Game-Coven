@@ -63,14 +63,18 @@ router.get('/game/:id', async (req, res) => {
     const reviewData = await Review.findAll({
       where: {
         game_id: req.params.id
-       }
-      });
+      },
+      include: [{ 
+        model: User, 
+        attributes: ['name']
+      }]
+    });
     const reviews = reviewData.map((review) => review.get({ plain: true }));
-      console.log({
-        ...games,
-        ...reviews,
-        logged_in: req.session.logged_in
-      });
+    console.log({
+      ...games,
+      ...reviews,
+      logged_in: req.session.logged_in
+    });
     res.render('gamepage', {
       ...games,
       reviews,
@@ -86,11 +90,14 @@ router.get("/profile", withAuth, async (req, res) => {
   try {
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ["password"] },
-      include: [{ model: Review }],
+      include: [{
+        model: Review,
+        include: [{ model: Game }]
+      }],
     });
 
     const user = userData.get({ plain: true });
-
+    console.log(user)
     res.render("profile", {
       ...user,
       logged_in: true,

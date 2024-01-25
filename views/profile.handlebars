@@ -2,21 +2,20 @@
     <!-- Navigation bar here -->
     <h1>Hello, {{name}}</h1>
 
-     {{#if reviews.length}}
-    <div class="col-md-6 project-list">
-    <h3>Your Reviews</h3>
+    {{#if reviews.length}}
+    <div class="flex-container-game">
+        <h3>Your Reviews</h3>
 
-    {{#each reviews as |review|}}
-    <div class="row mb-2">
-        <h4>{{review.score}}</h4>
-        <h5>{{review.description}}</h5>
+        {{#each reviews as |review|}}
+        <section id="boxReview">
+            <div class="flex-container-review">
+                <h4>{{review.game.name}}</h4>
+                <h5>Score {{review.score}}/10</h5>
+                <h6>{{review.description}}</h6>
+            </div>
+        </section>
+        {{/each}}
     </div>
-     
-    {{/each}}
-  </div>
-  {{/if}}
+    {{/if}}
 
 </div>
-
-        <script src="../package.json"></script>
-        <script src="../public/js/profile.js"></script>
