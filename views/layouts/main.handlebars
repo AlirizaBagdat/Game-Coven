@@ -24,11 +24,11 @@
             <nav>
                 <!-- Conditionally render login or logout links -->
                 {{#if logged_in}}
-                <a href="/profile">profile</a> |
+                <a href="/profile">profile <span><i class="fa-solid fa-user"></i></span></a> |
                 <button class="no-button" id="logout">logout <span><i class="fa-solid fa-arrow-right-to-bracket"></i></span></button>
                 {{else}}
                 <a href="/login">Login</a>
-                <a href="/signup">Sign up</a>
+                <a href="/signup">Sign up <span><i class="fa-solid fa-user-plus"></i></span></a>
                 {{/if}}
             </nav>
         </div>
