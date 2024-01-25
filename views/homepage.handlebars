@@ -1,39 +1,10 @@
-{{!-- <div>
-            <!-- Navigation bar or other common elements NEEDED! -->
-     <div id="latest-posts">
-                    <!-- Latest posts will be here -->
-    </div>
-
-    <form id="login-form">
-       
-        <script src="../public/js/login.js"></script>
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required>
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
-        <button type="submit">Login</button>
-    
-    </form>
-</div>
-<script src="../package.json" defer></script>
-<script src="../public/js/comments.js" defer></script>
-<script src="../public/js/homepage.js" defer></script> --}}
-
-
-
 {{#each games as |game| }}
-<div class="row mb-4 project">
-  <div class="col-md-5">
-    <h2>
-      <!-- Call helper function with triple brackets to render the emoji span as HTML -->
-      <a href="/game/{{game.id}}">{{game.name}}</a>
-    </h2>
-    <img src={{game.imageURL}} alt="picture"> 
+<section>
+  <h2 id="nameGame"><a href="/game/{{game.id}}">{{game.name}}</a></h2>
+  <div class="flex-container-game">
+  <img src={{game.imageURL}} alt="picture"> 
+  <p>{{game.description}}</p>
   </div>
-  <div class="col-md-7">
-    <p>
-      {{game.description}}
-    </p>
-  </div>
-</div>
+</section>
 {{/each}}
+
