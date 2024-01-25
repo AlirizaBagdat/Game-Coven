@@ -1,38 +1,36 @@
-<div class="row">
-  <div class="col-auto">
-    <h2>{{name}}!</h2>
-    <img src={{imageURL}} alt="picture"> 
-  </div>
+<section>
+  <h2 id="nameGame">{{name}}!</h2>
+  <div class="flex-container-game">
+  <img src={{imageURL}} alt="picture"> 
+  <p> {{description}}</p>
 </div>
-
-
-<div class="row mt-4">
-  <div class="col-md-6">
-    <h3> {{description}}</h3>
-  </div>
+</section>
 
  
 {{#if logged_in}}
-  <div class="create-review-section text-center mb-4">
-      <a href="/review/{{id}}" class="btn btn-primary">Create New Video Game Review</a>
+  <div class=" text-center mb-4">
+      <a id="addReview" href="/review/{{id}}" class="btn btn-primary">Add Review</a>
   </div>
 {{/if}} 
 
   {{#if reviews.length}}
   <div class="col-md-6 project-list">
-    <h3>Current Reviews</h3>
-
-    
+    <h3 id="cReview">Current Reviews</h3>
+  
 
     {{#each reviews as |review|}}
-    <div class="row mb-2">
-        <h4>{{review.score}}</h4>
+<section id="boxReview">    
+    <div class="flex-container-review">
+        <h4>Score {{review.score}}/10</h4>
         <h5>{{review.description}}</h5>
     </div>
+    
+</section>
+
      
     {{/each}}
   </div>
   {{/if}}
-</div>
+
 
 <script src="./js/profile.js"></script>
