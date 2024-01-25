@@ -159,6 +159,9 @@ nav a:hover, .no-button:hover {
     outline: none;
     border: none;
 }
+section img{
+    border-radius: 5px;
+}
 /* form *{
     font-family: 'Poppins',sans-serif;
     color: #ffffff;
@@ -230,15 +233,16 @@ section p{
 }
 #boxReview{
     display: flex;
+    flex-direction: row;
     height: 250px;
     padding: 20px;
 
     /* align-items: center; */
     /* align-items: stretch;  */
     margin-bottom: 20px;
-    width: 100%;
+    /* width: 100%; */
 
 }
-/* .flex-container-review{
-    
-} */
+#addReview{
+    margin-top: 20px;
+}
