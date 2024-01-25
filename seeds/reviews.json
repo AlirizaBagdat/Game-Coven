@@ -1,31 +1,31 @@
 [
 {
     "score": 9 ,
-    "description": "this games is amazing 1",
+    "description": "this games is amazing",
+    "game_id": 1,
+    "user_id": 1
+},
+{
+    "score": 8 ,
+    "description": "Love this game",
+    "game_id": 1,
+    "user_id": 1
+},
+{
+    "score": 10 ,
+    "description": "BEST GAME EVER",
     "game_id": 2,
     "user_id": 1
 },
 {
-    "score": 2 ,
-    "description": "this games is amazing 2",
-    "game_id": 2,
-    "user_id": 1
-},
-{
-    "score": 4 ,
-    "description": "this games is amazing 3",
-    "game_id": 2,
-    "user_id": 1
-},
-{
-    "score": 6 ,
-    "description": "this games is amazing 4",
+    "score": 5 ,
+    "description": "mid",
     "game_id": 2,
     "user_id": 2
 },
 {
     "score": 0 ,
-    "description": "this games is amazing 5",
+    "description": "not good waste of money",
     "game_id": 2,
     "user_id": 2
 }
