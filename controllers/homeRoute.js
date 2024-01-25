@@ -21,26 +21,37 @@ router.get("/", async (req, res) => {
 });
 
 // Get a specific review by ID
-router.get("/review/:id", async (req, res) => {
-  try {
-    const reviewData = await Review.findByPk(req.params.id, {
-      include: [
-        {
-          model: User,
-          attributes: ["name"],
-        },
-      ],
-    });
+// router.get("/review/:id", async (req, res) => {
+//   try {
+//     const reviewData = await Review.findByPk(req.params.id, {
+//       include: [
+//         {
+//           model: User,
+//           attributes: ["name"],
+//         },
+//       ],
+//     });
 
-    const review = reviewData.get({ plain: true });
+//     const review = reviewData.get({ plain: true });
 
-    res.render("review", {
-      ...review,
-      logged_in: req.session.logged_in,
-    });
-  } catch (err) {
-    res.status(500).json(err);
-  }
+//     res.render("review", {
+//       ...review,
+//       logged_in: req.session.logged_in,
+//     });
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
+
+//loads add a review page
+router.get("/review/:id", withAuth, async (req, res) => {
+  const gameData = await Game.findByPk(req.params.id);
+
+  const games = gameData.get({ plain: true });
+  res.render('addreview', {
+    ...games,
+    logged_in: true,
+  });
 });
 
 router.get('/game/:id', async (req, res) => {
