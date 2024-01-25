@@ -221,6 +221,7 @@ section{
     background: linear-gradient(to right, #1c1e22, #394047); /* Adjust the gradient colors */
     color: #ffffff; /* Text color */
     border: 1px solid #394047; 
+    margin-bottom: 5px;
 
 
 }
