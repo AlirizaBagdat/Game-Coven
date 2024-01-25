@@ -23,5 +23,55 @@
         "name":"Turbo Overkill",
         "description":"Turbo Overkill is complete and with many new updates (just in: spectacular ending credits). Clean up Paradise with your chainsaw leg, 15+ weapons & hovercar, and battle Syn (a super AI), bounty hunters, and cyberpunks aplenty. Apogee's most outrageous FPS since Duke Nukem 3D. Good hunting, Sir!",
         "imageURL":"https://cdn.cloudflare.steamstatic.com/steam/apps/1328350/header.jpg?t=1701886460"
+    },
+    {
+        "name":"STAR WARS Jedi: Survivor™",
+        "description":"The story of Cal Kestis continues in STAR WARS Jedi: Survivor™, a galaxy-spanning, third-person, action-adventure game.",
+        "imageURL":"https://cdn.cloudflare.steamstatic.com/steam/apps/1774580/header.jpg?t=1705857528"
+    },
+    {
+        "name":"Diablo® IV",
+        "description":"Join the fight for Sanctuary in Diablo IV, the ultimate action RPG adventure. Experience the critically acclaimed campaign and new seasonal content.",
+        "imageURL":"https://cdn.cloudflare.steamstatic.com/steam/apps/2344520/header.jpg?t=1706098447"
+    },
+    {
+        "name":"Lies of P",
+        "description":"Lies of P is a thrilling soulslike that takes the story of Pinocchio, turns it on its head, and sets it against the darkly elegant backdrop of the Belle Epoque era.",
+        "imageURL":"https://cdn.cloudflare.steamstatic.com/steam/apps/1627720/header.jpg?t=1706163526"
+    },
+    {
+        "name":"Forza Motorsport",
+        "description":"Out-build the competition in the all-new career. Race your friends in adjudicated multiplayer events. Compete in over 500 cars on world-famous tracks with cutting edge AI, advanced physics, and tire and fuel strategy.",
+        "imageURL":"https://cdn.cloudflare.steamstatic.com/steam/apps/2440510/header.jpg?t=1706144420"
+    },
+    {
+        "name":"System Shock",
+        "description":"A first-person fight to the death in the depths of space!",
+        "imageURL":"https://cdn.cloudflare.steamstatic.com/steam/apps/482400/header.jpg?t=1705023219"
+    },
+    {
+        "name":"Hogwarts Legacy",
+        "description":"Hogwarts Legacy is an immersive, open-world action RPG. Now you can take control of the action and be at the center of your own adventure in the wizarding world.",
+        "imageURL":"https://cdn.cloudflare.steamstatic.com/steam/apps/990080/header.jpg?t=1699983469"
+    },
+    {
+        "name":"Hi-Fi RUSH",
+        "description":"Test your abilities in two new game modes, uncover new rewards and even a few secrets in the Arcade Challenge! Update! Feel the beat as wannabe rockstar Chai and his ragtag team fight against an evil megacorp in a world that syncs to the music.",
+        "imageURL":"https://cdn.cloudflare.steamstatic.com/steam/apps/1817230/header.jpg?t=1705894766"
+    },
+    {
+        "name":"Sea of Stars",
+        "description":"Sea of Stars is a turn-based RPG inspired by the classics. It tells the story of two Children of the Solstice who will combine the powers of the sun and moon to perform Eclipse Magic, the only force capable of fending off the monstrous creations of the evil alchemist known as The Fleshmancer.",
+        "imageURL":"https://cdn.cloudflare.steamstatic.com/steam/apps/1244090/header.jpg?t=1706149778"
+    },
+    {
+        "name":"COCOON",
+        "description":"From Jeppe Carlsen, the lead gameplay designer of LIMBO and INSIDE — COCOON takes you on an adventure across worlds within worlds. Master world-leaping mechanics and solve intricate puzzles to unravel a cosmic mystery.",
+        "imageURL":"https://cdn.cloudflare.steamstatic.com/steam/apps/1497440/header.jpg?t=1705484648"
+    },
+    {
+        "name":"Chants of Sennaar",
+        "description":"Legend says that one day, a traveler will reunite the Peoples of the Tower who are unable to communicate with each other. Observe, listen, and decipher ancient languages in a fascinating universe inspired by the myth of Babel.",
+        "imageURL":"https://cdn.cloudflare.steamstatic.com/steam/apps/1931770/header.jpg?t=1706044713"
     }
 ]
