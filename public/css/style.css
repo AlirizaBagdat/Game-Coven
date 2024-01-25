@@ -204,3 +204,41 @@ input{
     border-radius: 5px;
     cursor: pointer;
 }
+
+.flex-container-game{
+    display: flex;
+    height: 250px;
+    align-items: center;
+    width: 100%;
+   
+}
+section{
+    /* border: 2px solid #333; Adjust the border width and color as needed */
+    padding: 20px; 
+    background: linear-gradient(to right, #1c1e22, #394047); /* Adjust the gradient colors */
+    color: #ffffff; /* Text color */
+    border: 1px solid #394047; 
+
+
+}
+section p{
+    margin-left: 30px;
+}
+#cReview{
+    margin: 20px;
+    
+}
+#boxReview{
+    display: flex;
+    height: 250px;
+    padding: 20px;
+
+    /* align-items: center; */
+    /* align-items: stretch;  */
+    margin-bottom: 20px;
+    width: 100%;
+
+}
+/* .flex-container-review{
+    
+} */
