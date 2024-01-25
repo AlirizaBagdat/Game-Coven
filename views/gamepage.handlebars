@@ -1,36 +1,38 @@
 <section>
   <h2 id="nameGame">{{name}}!</h2>
   <div class="flex-container-game">
-  <img src={{imageURL}} alt="picture"> 
-  <p> {{description}}</p>
-</div>
+    <img src={{imageURL}} alt="picture">
+    <p> {{description}}</p>
+  </div>
 </section>
 
- 
+
 {{#if logged_in}}
-  <div class=" text-center mb-4">
-      <a id="addReview" href="/review/{{id}}" class="btn btn-primary">Add Review</a>
-  </div>
-{{/if}} 
+<div class=" text-center mb-4">
+  <a id="addReview" href="/review/{{id}}" class="btn btn-primary">Add Review</a>
+</div>
+{{/if}}
 
-  {{#if reviews.length}}
-  <div class="col-md-6 project-list">
-    <h3 id="cReview">Current Reviews</h3>
-  
+{{#if reviews.length}}
+<div class="col-md-6 project-list">
+  <h3 id="cReview">Current Reviews</h3>
 
-    {{#each reviews as |review|}}
-<section id="boxReview">    
+
+  {{#each reviews as |review|}}
+  <section id="boxReview">
+
     <div class="flex-container-review">
-        <h4>Score {{review.score}}/10</h4>
-        <h5>{{review.description}}</h5>
+      <h4>{{review.user.name}}'s Review</h4>
+      <h5>Score: {{review.score}}/10</h5>
+      <p>{{review.description}}</p>
     </div>
-    
-</section>
-
-     
-    {{/each}}
-  </div>
-  {{/if}}
+      <h4 class="review-date">Date: {{formatDate review.date_created}}</h4>
+  </section>
 
 
-<script src="./js/profile.js"></script>
+  {{/each}}
+</div>
+{{/if}}
+
+
+<script src="/js/profile.js"></script>
